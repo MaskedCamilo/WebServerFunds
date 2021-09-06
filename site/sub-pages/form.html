@@ -1,9 +1,48 @@
 <!DOCTYPE html>
- <html>
+<html>
     <head>
         <title>form.html</title>
     </head>
     <body>
         <h1>Beatles-Test</h1>
-        <p>
-            
+        <form>
+            <p>
+                Who were the two founders of The Beatles?<br>
+                <input type="checkbox" id="member1" name="member1" value="Paul">
+                <label for="member1">Paul McCartney</label><br>
+                <input type="checkbox" id="member2" name="member2" value="Ringo">
+                <label for="member2">Ringo Starr</label><br>
+                <input type="checkbox" id="member3" name="member3" value="John">
+                <label for="member3">John Lennon</label><br>
+                <input type="checkbox" id="member4" name="member4" value="George">
+                <label for="member4">George Harrison</label><br>
+
+            </p>
+             <p>
+                <label for="birthday">When was George Harrison born?</label>
+                <input type="date" id="birthday" name="birthday" required>
+            </p>
+            <p>
+                What instrument did Paul McCartney play in The Beatles?<br>
+                <input type="radio" id="drums" name="instrument" value="Drums" required>
+                <label for="drums">Drums</label><br>
+                <input type="radio" id="guitar" name="instrument" value="Guitar">
+                <label for="guitar">Guitar</label><br>
+                <input type="radio" id="bass" name="instrument" value="Bass">
+                <label for="bass">Bass</label><br>
+                <input type="radio" id="piano" name="instrument" value="Piano">
+                <label for="piano">Piano</label>
+             </p>
+            <p>
+
+                <label for="year">What year did John Lennon die?</label><br>
+                <input type="text" id="year" name="year" pattern="\d{4}$" 
+                placeholder="1234" title="4 numeric characters only" required>
+                    
+            </p>
+            <p>
+                <input type="submit" value="Submit">
+            </p>
+        </form>
+    </body>     
+</html>   
