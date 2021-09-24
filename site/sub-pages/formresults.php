@@ -4,7 +4,7 @@
         <title>formresults.php</title>
     </head>
     <body> 
-        <p> The two founders of The Beatles are:
+        <p> The two founders of The Beatles are:<br>
             <?php
                 if(isset($_POST['member1']))
                 echo "Paul<br>";
