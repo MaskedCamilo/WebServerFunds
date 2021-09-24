@@ -5,10 +5,7 @@
     </head>
     <body> 
         <p>
-            <?= var_dump($_GET) ?>
-        </p>
-        <p>
-            <?= var_dump($_POST) ?>
+            John Lennon died in <?(int)$_POST['year']?> 
         </p>
     </body>
 </html>
