@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Step 2.2</title>
+        <title>Step 2.5</title>
         <body>
             <p>
-                <?= var_dump($_SERVER) ?>
+                Your user agent is <?= $_SERVER["HTTP_USER_AGENT"]; ?>
             </p>
         </body>
     </head>     
