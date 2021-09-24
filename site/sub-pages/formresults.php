@@ -5,7 +5,7 @@
     </head>
     <body> 
         <p>
-            John Lennon died in <? (int)$_POST['year'] ?> 
+            John Lennon died in <? (int)$_POST['year']; ?> 
         </p>
     </body>
 </html>
