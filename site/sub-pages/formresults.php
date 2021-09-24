@@ -7,16 +7,16 @@
         <p> The two founders of The Beatles are:
             <?php
                 if(isset($_POST['member1']))
-                echo "Paul"<br>
+                echo "Paul"<br>;
 
                 if(isset($_POST['member2']))
-                echo "Ringo"<br>
+                echo "Ringo"<br>;
 
                 if(isset($_POST['member3']))
-                echo "John"<br>
+                echo "John"<br>;
 
                 if(isset($_POST['member4']))
-                echo "George"<br>
+                echo "George"<br>;
             ?>
         </p>
         <p>
