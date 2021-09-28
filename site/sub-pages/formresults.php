@@ -22,7 +22,7 @@
         <p>
             <?php
                 $date = preg_replace("([^0-9/])", "", $_POST['date']);
-                echo "$date"
+                echo $date;
             ?>
         </p>
 
