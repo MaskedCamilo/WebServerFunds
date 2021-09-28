@@ -19,14 +19,12 @@
                 echo "George<br>";
             ?>
         </p>
-        <p>
+        <p> Date Geroge Harrison was born on:<br>
             <?php
                 $date = preg_replace("([^0-9-])", "", $_POST['birthday']);
                 echo $date;
             ?>
         </p>
-
-
         <p> Paul McCartney played:<br>
             <?php
                 if(($_POST['instrument']) == "Drums") 
