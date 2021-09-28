@@ -21,16 +21,16 @@
         </p>
         <p> Paul McCartney played:<br>
             <?php
-                if(isset($_POST['drums']))
+                if(isset($_POST['Drums']))
                 echo "Drums<br>";
 
-                if(isset($_POST['guitar']))
+                if(isset($_POST['Guitar']))
                 echo "Guitar<br>";
 
-                if(isset($_POST['bass']))
+                if(isset($_POST['Bass']))
                 echo "Bass<br>";
 
-                if(isset($_POST['piano']))
+                if(isset($_POST['Piano']))
                 echo "Piano<br>";
             ?>
         </p>
