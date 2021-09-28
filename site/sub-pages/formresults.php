@@ -19,6 +19,14 @@
                 echo "George<br>";
             ?>
         </p>
+        <p>
+            <?php
+                $date = preg_replace("([^0-9/])", "", $_POST['date']);
+                echo '$date'
+            ?>
+        </p>
+
+
         <p> Paul McCartney played:<br>
             <?php
                 if(($_POST['instrument']) == "Drums") 
