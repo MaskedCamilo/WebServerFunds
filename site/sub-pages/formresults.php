@@ -21,8 +21,8 @@
         </p>
         <p> Paul McCartney played:<br>
             <?php
-                if((isset($_POST['instrument'])) && (defined('Drums')))
-                echo "Drums<br>";
+                if(($_POST['instrument']) == "Drums") 
+                echo "Drummms<br>";
 
                 if(isset($_POST['Guitar']))
                 echo "Guitar<br>";
