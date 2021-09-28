@@ -21,7 +21,7 @@
         </p>
         <p>
             <?php
-                $date = preg_replace("([^0-9/])", "", $_POST['birthday']);
+                $date = preg_replace("([^0-9-])", "", $_POST['birthday']);
                 echo $date;
             ?>
         </p>
