@@ -19,6 +19,21 @@
                 echo "George<br>";
             ?>
         </p>
+        <p> Paul McCartney played:<br>
+            <?php
+                if(isset($_POST['drums']))
+                echo "Drums<br>";
+
+                if(isset($_POST['guitar']))
+                echo "Guitar<br>";
+
+                if(isset($_POST['bass']))
+                echo "Bass<br>";
+
+                if(isset($_POST['piano']))
+                echo "Piano<br>";
+            ?>
+        </p>
         <p>
             John Lennon died in <?= (int)$_POST['year']; ?> 
         </p>
