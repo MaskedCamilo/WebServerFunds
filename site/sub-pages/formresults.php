@@ -22,15 +22,15 @@
         <p> Paul McCartney played:<br>
             <?php
                 if(($_POST['instrument']) == "Drums") 
-                echo "Drummms<br>";
+                echo "Drums<br>";
 
-                if(isset($_POST['Guitar']))
+                if(($_POST['instrument']) == "Guitar") 
                 echo "Guitar<br>";
 
-                if(isset($_POST['Bass']))
+                if(($_POST['instrument']) == "Bass") 
                 echo "Bass<br>";
 
-                if(isset($_POST['Piano']))
+                if(($_POST['instrument']) == "Piano") 
                 echo "Piano<br>";
             ?>
         </p>
