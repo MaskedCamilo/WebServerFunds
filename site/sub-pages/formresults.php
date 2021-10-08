@@ -43,5 +43,24 @@
         <p>
             John Lennon died in <?= (int)$_POST['year']; ?> 
         </p>
+        <?php
+            $servername = "localhost";
+            $username = "camilo";
+            $password = "camilo01";
+            $database = "albums";
+
+            // Create connection
+            $conn = mysqli_connect($servername, $username, $password, $dbname);
+            // Check connection
+            if (!$conn) {
+                die("Connection failed: " . mysqli_connect_error());
+            }
+            echo "Connected successfully";
+
+            $sql = "select * from albums;";
+            $result = mysqli_query($conn, $sql);
+            foreach($result as $row) {echo "id: {$row["id"]} | Album Name: {$row["album_name"]} | Length: {$row["length"]} 
+                | First Single: {$row["first_single"]} </br>";}
+        ?> 
     </body>
 </html>
