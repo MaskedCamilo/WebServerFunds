@@ -76,6 +76,19 @@
             foreach($result as $row) {echo "Album Number: {$row['id']} | Album Name: 
                 {$row['album_name']} | Release Year: {$row['release_year']} | Length: 
                 {$row['length']} | First Single: {$row['first_single']} ";}
+
+                
+                if(isset($_POST['album']))
+                    echo "yes album";
+                
+                 if(isset($_POST['ryear']))
+                    echo "yes year";
+
+                if(isset($_POST['alength']))
+                    echo "yes length";
+               
+                if(isset($_POST['asingle']))
+                    echo "yes single";
         ?> 
     </body>
 </html>
