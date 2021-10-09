@@ -79,7 +79,7 @@
 
                 
                 if(isset($_POST['album']))
-                    echo "yes album\n\n";
+                    echo "yes album/n";
                  if(isset($_POST['ryear']))
                     echo "yes year";
 
