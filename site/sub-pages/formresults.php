@@ -78,12 +78,10 @@
                             break;
             }
 
-            echo $sel;
-
-           // $sql = "select * from albums where id = '1';";
-            //$result = mysqli_query($conn, $sql);
-            //foreach($result as $row) {echo "Album Number: {$row['id']} | Album Name: 
-               // {$row['album_name']} | Release Year: {$row['release_year']}\n";}
+            $sql = "select * from albums where id = $sel;";
+            $result = mysqli_query($conn, $sql);
+            foreach($result as $row) {echo "Album Number: {$row['id']} | Album Name: 
+                {$row['album_name']} | Release Year: {$row['release_year']}\n";}
         ?> 
     </body>
 </html>
