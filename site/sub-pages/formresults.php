@@ -44,18 +44,13 @@
             John Lennon died in <?= (int)$_POST['year']; ?> 
         </p>
         <?php
-            $servername = "localhost";
+            $server = "localhost";
             $username = "camilo";
             $password = "camilo01";
             $database = "albums";
 
             // Create connection
-            $conn = mysqli_connect($servername, $username, $password, $dbname);
-            // Check connection
-            if (!$conn) {
-                die("Connection failed: " . mysqli_connect_error());
-            }
-            echo "Connected successfully";
+            $conn = mysqli_connect($server, $username, $password, $database);
 
             $sql = "select * from albums;";
             $result = mysqli_query($conn, $sql);
