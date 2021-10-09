@@ -75,20 +75,20 @@
             $result = mysqli_query($conn, $sql);
             foreach($result as $row) {echo "Album Number: {$row['id']} | Album Name: 
                 {$row['album_name']} | Release Year: {$row['release_year']} | Length: 
-                {$row['length']} | First Single: {$row['first_single']} ";}<br>
+                {$row['length']} | First Single: {$row['first_single']} ";}
 
                 
                 if(isset($_POST['album']))
-                    echo "yes album";<br>
+                    echo "yes album"<br>;
                 
                  if(isset($_POST['ryear']))
-                    echo "yes year";<br>
+                    echo "yes year"<br>;
 
                 if(isset($_POST['alength']))
-                    echo "yes length";<br>
+                    echo "yes length"<br>;
                
                 if(isset($_POST['asingle']))
-                    echo "yes single";<br>
+                    echo "yes single"<br>;
         ?> 
     </body>
 </html>
