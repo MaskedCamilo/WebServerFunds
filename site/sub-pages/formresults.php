@@ -79,16 +79,16 @@
 
                 
                 if(isset($_POST['album']))
-                    echo "yes album"<br>;
+                    echo "yes album";
                 
                  if(isset($_POST['ryear']))
-                    echo "yes year"<br>;
+                    echo "yes year";
 
                 if(isset($_POST['alength']))
-                    echo "yes length"<br>;
+                    echo "yes length";
                
                 if(isset($_POST['asingle']))
-                    echo "yes single"<br>;
+                    echo "yes single";
         ?> 
     </body>
 </html>
