@@ -52,10 +52,38 @@
             // Create connection
             $conn = mysqli_connect($server, $username, $password, $database);
 
-            $sql = "select * from albums;";
-            $result = mysqli_query($conn, $sql);
-            foreach($result as $row) {echo "id: {$row["id"]} | Album Name: {$row["album_name"]} | Length: {$row["length"]} 
-                | First Single: {$row["first_single"]} </br>";}
+            //$sql = "select * from albums;";
+            //$result = mysqli_query($conn, $sql);
+            //foreach($result as $row) {echo "id: {$row["id"]} | Album Name: {$row["album_name"]} | Length: {$row["length"]} 
+                //| First Single: {$row["first_single"]} </br>";}
+
+            switch ($_POST['selection']) {
+                case "ppm": 
+                            $sel = 1;
+                            break;
+                case "hdn":
+                            $sel = 2;
+                            break;    
+                case "rev":
+                            $sel = 3;
+                            break;
+                case "sgt":
+                            $sel = 4;
+                            break;
+                case "mmt":
+                            $sel = 5;
+                            break;
+                case "twa":
+                            $sel = 6;
+                            break;
+            }
+
+            echo $sel;
+
+           // $sql = "select * from albums where id = '1';";
+            //$result = mysqli_query($conn, $sql);
+            //foreach($result as $row) {echo "Album Number: {$row['id']} | Album Name: 
+               // {$row['album_name']} | Release Year: {$row['release_year']}\n";}
         ?> 
     </body>
 </html>
