@@ -80,7 +80,7 @@
                 
                 if(isset($_POST['album']))
                     echo "yes album";
-                    echo" ";
+                    echo <br>;
                  if(isset($_POST['ryear']))
                     echo "yes year";
 
