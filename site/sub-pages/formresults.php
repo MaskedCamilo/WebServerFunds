@@ -42,7 +42,7 @@
         </p>
         <p>
             John Lennon died in <?= (int)$_POST['year']; ?> 
-        </p>
+        </p> Album information:<br>
         <?php
             $server = "localhost";
             $username = "camilo";
