@@ -98,6 +98,7 @@
                     $san_length = preg_replace("([^0-9:])", "", $alength);
                     $san_asingle = filter_var($asingle, FILTER_SANITIZE_STRING);
 
+                    //Inserts data into the database
                     $sql = "INSERT INTO albums (album_name, release_year, length, first_single) 
                     VALUES ('$san_album', '$san_ryear', '$san_length', '$san_asingle')";
                     $result = mysqli_query($conn, $sql);
