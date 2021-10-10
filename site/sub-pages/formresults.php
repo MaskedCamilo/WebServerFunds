@@ -101,7 +101,7 @@
                     $sql = "INSERT INTO albums (album_name, release_year, length, first_single) 
                     VALUES ('$san_album', '$san_ryear', '$san_length', '$san_asingle')";
                     $result = mysqli_query($conn, $sql);
-                    $result ? "Sucess!" : "Failure: " . mysqli_error($conn);
+                    echo $result ? "Sucess!" : "Failure: " . mysqli_error($conn);
                 }
         ?> 
     </body>
