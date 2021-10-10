@@ -85,9 +85,15 @@
             if((!isset($album) || trim($album) =='') || (!isset($ryear) || trim($ryear) =='')
                 || (!isset($alength) || trim($alength) =='') || (!isset($asingle) || trim($asingle) ==''))
             
-                echo "You did not enter information about another album";
+                echo "You did not enter information about another album.";
             else 
-                echo "album is set";
+                {
+                    $san_ryear = (int)$ryear;
+                    echo $san_ryear;
+
+
+
+                }
         ?> 
     </body>
 </html>
