@@ -75,7 +75,7 @@
             $result = mysqli_query($conn, $sql);
             foreach($result as $row) {echo "Album Number: {$row['id']} | Album Name: 
                 {$row['album_name']} | Release Year: {$row['release_year']} | Length: 
-                {$row['length']} | First Single: {$row['first_single']} ";}   
+                {$row['length']} | First Single: {$row['first_single']} \r\n";}   
 
             $album = $_POST['album'];
             $ryear = $_POST['ryear'];
