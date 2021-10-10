@@ -98,6 +98,11 @@
 
                     $san_length = preg_replace("([^0-9:])", "", $alength);
                     echo $san_length;
+                    echo "<br/>";
+
+                    $san_asingle = filter_var($asingle, FILTER_SANITIZE_STRING);
+                    echo $san_asingle;
+                    echo "<br/>";
 
 
 
