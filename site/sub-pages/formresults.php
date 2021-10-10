@@ -75,7 +75,8 @@
             $result = mysqli_query($conn, $sql);
             foreach($result as $row) {echo "Album Number: {$row['id']} | Album Name: 
                 {$row['album_name']} | Release Year: {$row['release_year']} | Length: 
-                {$row['length']} | First Single: {$row['first_single']} ";}   
+                {$row['length']} | First Single: {$row['first_single']} ";}  
+            echo "<br/>"; 
 
             $album = $_POST['album'];
             $ryear = $_POST['ryear'];
@@ -83,7 +84,7 @@
             $asingle = $_POST['asingle'];
 
             if(!isset($album) || trim($album) =='')
-                echo "\r\n You did not enter information about another album";
+                echo "You did not enter information about another album";
             else 
                 echo "album is set";
 
