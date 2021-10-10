@@ -89,10 +89,12 @@
             else 
                 {
                     $san_album = filter_var($album, FILTER_SANITIZE_STRING);
-                    echo $san_album   ;
+                    echo $san_album;
+                    echo "</br";
 
                     $san_ryear = (int)$ryear;
-                    echo $san_ryear   ;
+                    echo $san_ryear;
+                    echo "</br";
 
                     $san_length = preg_replace("([^0-9-])", "", $alength);
                     echo $san_length;
