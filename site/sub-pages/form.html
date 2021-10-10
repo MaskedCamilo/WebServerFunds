@@ -64,11 +64,9 @@
                 <input type="number" id="ryear" name="ryear" min="1963" max="1970" 
                 placeholder="1963"><br>
 
-                <div id="alength">
-                    <label for="alength">Album's Length</label>
-                    <input type="number" name="alength" min="10" step="1"> :
-                        <input type="number" min="0" max="59" step="1">
-                </div>
+                <label for="alength">Album's Length</label>
+                <input type="text" id="alength" name="alength" pattern="^([0-9]{2}:[0-9]{2})$" 
+                    placeholder="32:16"><br>
 
                 <label for="asingle">Enter the first single: </label>
                 <input type="text" id="asingle" name="asingle" size="30" 
