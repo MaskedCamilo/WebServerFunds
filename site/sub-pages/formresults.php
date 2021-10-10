@@ -88,6 +88,9 @@
                 echo "You did not enter information about another album.";
             else 
                 {
+                    $san_album = filter_var($album, FILTER_SANITIZE_STRING);
+                    echo $san_album;
+
                     $san_ryear = (int)$ryear;
                     echo $san_ryear;
 
