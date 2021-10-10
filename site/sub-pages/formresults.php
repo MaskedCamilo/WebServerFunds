@@ -83,13 +83,11 @@
             $asingle = $_POST['asingle'];
 
             if((!isset($album) || trim($album) =='') || (!isset($ryear) || trim($ryear) =='')
-                || (!isset($alength) || trim($alength) ==''))
+                || (!isset($alength) || trim($alength) =='') || (!isset($asingle) || trim($asingle) ==''))
             
                 echo "You did not enter information about another album";
             else 
                 echo "album is set";
-
-
         ?> 
     </body>
 </html>
