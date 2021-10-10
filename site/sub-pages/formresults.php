@@ -44,12 +44,14 @@
             John Lennon died in <?= (int)$_POST['year']; ?> 
         </p> Album information:<br>
         <?php
+            //Establishes connection to database
             $server = "localhost";
             $username = "camilo";
             $password = "camilo01";
             $database = "albums";
             $conn = mysqli_connect($server, $username, $password, $database);
 
+            //Defines the album selected by user
             switch ($_POST['selection']) {
                 case "ppm": 
                     $sel = 1;
@@ -70,7 +72,8 @@
                     $sel = 6;
                     break;
             }
-
+            
+            //Displays album selected by user
             $sql = "select * from albums where id = $sel;";
             $result = mysqli_query($conn, $sql);
             foreach($result as $row) {echo "Album Number: {$row['id']} | Album Name: 
@@ -81,31 +84,24 @@
             $ryear = $_POST['ryear'];
             $alength = $_POST['alength'];
             $asingle = $_POST['asingle'];
-
+                
+            //Checks if the form fields are empty
             if((!isset($album) || trim($album) =='') || (!isset($ryear) || trim($ryear) =='')
                 || (!isset($alength) || trim($alength) =='') || (!isset($asingle) || trim($asingle) ==''))
             
                 echo "You did not enter information about another album.";
             else 
                 {
+                    // Input Sanitazion
                     $san_album = filter_var($album, FILTER_SANITIZE_STRING);
-                    echo $san_album;
-                    echo "<br/>";
-
                     $san_ryear = (int)$ryear;
-                    echo $san_ryear;
-                    echo "<br/>";
-
                     $san_length = preg_replace("([^0-9:])", "", $alength);
-                    echo $san_length;
-                    echo "<br/>";
-
                     $san_asingle = filter_var($asingle, FILTER_SANITIZE_STRING);
-                    echo $san_asingle;
-                    echo "<br/>";
 
-
-
+                    $sql = "INSERT INTO albums (album_name, release_year, length, first_single) 
+                    VALUES ('$san_album', '$san_ryear', '$san_length', '$san_asingle')";
+                    $result = mysqli_query($conn, $sql);
+                    $result ? "Sucess!" : "Failure: " . mysqli_error($conn);
                 }
         ?> 
     </body>
