@@ -96,7 +96,7 @@
                     echo $san_ryear;
                     echo "<br/>";
 
-                    $san_length = preg_replace("([^0-9-])", "", $alength);
+                    $san_length = preg_replace("([^0-9:])", "", $alength);
                     echo $san_length;
 
 
