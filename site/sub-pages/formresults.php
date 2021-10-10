@@ -89,7 +89,7 @@
             else 
                 {
                     $san_album = filter_var($album, FILTER_SANITIZE_STRING);
-                    echo $san_album;
+                    echo $san_album <br/>;
 
                     $san_ryear = (int)$ryear;
                     echo $san_ryear;
