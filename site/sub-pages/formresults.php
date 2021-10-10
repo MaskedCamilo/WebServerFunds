@@ -82,7 +82,7 @@
             $alength = $_POST['alength'];
             $asingle = $_POST['asingle'];
 
-            if(!isset($album) || trim($album) =='')
+            if(!isset($album))
                 echo "album not set";
             else 
                 echo "album is set";
