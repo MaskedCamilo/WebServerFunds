@@ -96,7 +96,6 @@
                     $san_album = filter_var($album, FILTER_SANITIZE_STRING);
                     $san_ryear = (int)$ryear;
                     $san_length = preg_replace("([^0-9:])", "", $alength);
-                        echo $san_length;
                     $san_asingle = filter_var($asingle, FILTER_SANITIZE_STRING);
 
                     $sql = "INSERT INTO albums (album_name, release_year, length, first_single) 
