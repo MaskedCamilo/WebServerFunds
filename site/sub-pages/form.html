@@ -65,8 +65,10 @@
                 placeholder="1963"><br>
 
                 <label for="alength">Album's Length</label>
-                <input type="number" id="alength" name="alength" min="10:00" max="99:99"
-                    step="1"><br>
+                <div id="alength">
+                    <input type="number" name="alength" min="10" step="1">:
+                        <input type="number" min="0" max="59" step="1">
+                </div>
 
                 <label for="asingle">Enter the first single: </label>
                 <input type="text" id="asingle" name="asingle" size="30" 
