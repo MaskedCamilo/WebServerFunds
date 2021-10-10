@@ -75,19 +75,19 @@
             $result = mysqli_query($conn, $sql);
             foreach($result as $row) {echo "Album Number: {$row['id']} | Album Name: 
                 {$row['album_name']} | Release Year: {$row['release_year']} | Length: 
-                {$row['length']} | First Single: {$row['first_single']} ";}
+                {$row['length']} | First Single: {$row['first_single']} ";}   
 
-                
-                if(isset($_POST['album']))
-                    echo "yes album   ";
-                 if(isset($_POST['ryear']))
-                    echo "yes year   ";
+            $album = $_POST['album'];
+            $ryear = $_POST['ryear'];
+            $alength = $_POST['alength'];
+            $asingle = $_POST['asingle'];
 
-                if(isset($_POST['alength']))
-                    echo "yes length   ";
-               
-                if(isset($_POST['asingle']))
-                    echo "yes single";
+            if(!isset($album) || trim($album) =='')
+                echo "album not set";
+            else 
+                echo "album is set";
+
+
         ?> 
     </body>
 </html>
