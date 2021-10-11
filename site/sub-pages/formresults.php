@@ -104,6 +104,8 @@
                     echo $result ? "The album was sucessfully submitted!" 
                         : "Could not submit album, try again.: " . mysqli_error($conn);
                 }
+                
+            mysqli_close($conn);
         ?> 
     </body>
 </html>
