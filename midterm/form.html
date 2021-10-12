@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>form.html</title>
+    </head>
+    <body>
+        <h1>Step-2</h1>
+        <form action="response.php" method="POST">
+            <p>
+                <input type="radio" id="masks" name="product" value="Masks" required>
+                <label for="masks">Masks</label><br>
+                <input type="radio" id="visors" name="product" value="Visors">
+                <label for="visors">Visors</label><br>
+                <input type="radio" id="gowns" name="product" value="Gowns">
+                <label for="gowns">Gowns</label><br>
+            </p>
+            <p>
+                <label for="quantity">Quantity</label><br>
+                <input type="text" id="quantity" name="quantity" pattern="\d{1-7}$" 
+                placeholder="1234567" title="Max 7 numeric characters" required>        
+            </p>
+            <p>
+                <input type="submit" value="Submit">
+            </p>
+        </form>
+    </body>
+</html>
