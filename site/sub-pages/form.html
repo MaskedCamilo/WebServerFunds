@@ -34,11 +34,18 @@
                 <label for="piano">Piano</label>
              </p>
             <p>
-
                 <label for="year">What year did John Lennon die?</label><br>
-                <input type="text" id="year" name="year" pattern="\d{4}$" 
-                placeholder="1234" title="4 numeric characters only" required>
-                    
+                <input type="text" id="year" name="year" pattern="\d{4}$" onblur="requiredf(this)"
+                placeholder="1234" title="4 numeric characters only" required> 
+                <span id="req" style="color:red; font-weight:bold; display:none"> 
+                    *This field is required </span> 
+                
+                <script>
+                    function requiredf(elem){
+                        if (elem.value == "")
+                            document.getElementById("req").style.display = "block";
+                    }
+                </script>    
             </p>
             <p>
                 <!--Display Information retrieved from database-->
