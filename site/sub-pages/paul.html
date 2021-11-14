@@ -13,7 +13,7 @@
                 <span style="font-weight:bold">Sir James Paul McCartney</span> (18 June 1942). 
                 He was one of the founders of the group, co-lead vocalist, co-songwriter and bassist.
             </p>
-            <div id="demo">
+            <div id="f_song">
                 <h2>The XMLHttpRequest Object</h2>
             </div>
         </div>
@@ -52,10 +52,10 @@
             function loadDoc() {
                 var xhttp = new XMLHttpRequest();
                 xhttp.onload = function() {
-                    document.getElementById("demo").innerHTML =
+                    document.getElementById("f_song").innerHTML =
                     this.responseText;
                 }
-            xhttp.open("GET", "ajax_info.txt");
+            xhttp.open("GET", "pm_firstsongs.txt");
             xhttp.send();
             }
         </script>
