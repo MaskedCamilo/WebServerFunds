@@ -13,6 +13,7 @@
                 <span style="font-weight:bold">Sir James Paul McCartney</span> (18 June 1942). 
                 He was one of the founders of the group, co-lead vocalist, co-songwriter and bassist.
             </p>
+            <p id="funfacts_p"></p>
         </div>
         <p id="return" style="text-align:center">
             <a href="../index.html"> Return to Index Page</a>
@@ -22,7 +23,7 @@
             <button id="funfact" type="button" onclick= "alert('Paul McCartney twice failed auditions to be a choir boy')">Fun Fact!</button><br>
 
             Click the following button to display information about Paul McCartney's first written song (instead of general information):
-            <button id="fsong" type="button" onclick= "firstsong(); changesrc(); changeText(this);">First Song!</button>
+            <button id="fsong" type="button" onclick= "firstsong(); changesrc(); changeText(this); loadDoc();">First Song!</button>
         </p>
 
         <script>
@@ -44,6 +45,13 @@
 
            function changeText(id){
                 id.innerHTML="Paul's First Song!"
+            }
+
+            function loadDoc() {
+                var xhttp = new XMLHttpRequest();
+                xhttp.open("GET", "pm_funfacts.txt", false);
+                xhttp.send();
+                document.getElementById("funfacts_p").innerHTML = xhttp.responseText;
             }
         </script>
     </body>
