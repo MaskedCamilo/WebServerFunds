@@ -49,7 +49,7 @@
                 echo "Toggling<br>";
                 
                 if(($_POST['ledfun']) == "Setled") 
-                echo "Setting<br>";
+                echo "Set LED<br>";
             ?>
 
         </p>Album information:<br>
