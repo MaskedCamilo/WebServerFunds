@@ -47,9 +47,10 @@
             <?php
                 if(($_POST['ledfun']) == "Toggle") 
                 echo "Toggling<br>";
-                
+
                 if(($_POST['ledfun']) == "Ledset") 
-                echo "Set LED<br>";
+                echo "LED<br>"
+                
             ?>
 
         </p>Album information:<br>
