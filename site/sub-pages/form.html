@@ -40,6 +40,7 @@
                 <span id="req" style="color:red; font-weight:bold; display:none"> 
                     *This field is required </span> 
                 
+                <!--Modify Element (HTML DOM)-->
                 <script>
                     function requiredf(elem){
                         if (elem.value == "")
@@ -48,7 +49,7 @@
                 </script>    
             </p>
             <p>
-                <!--Set or toggle a LED-->
+                <!--Set or toggle a LED (GPIO)-->
                 Choose a LED function:
                 <input type="radio" id="toggle" name="ledfun" value="Toggle" required>
                 <label for="toggle">Toggle</label>

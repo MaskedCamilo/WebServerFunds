@@ -42,7 +42,17 @@
         </p>
         <p>
             John Lennon died in <?= (int)$_POST['year']; ?> 
-        </p> Album information:<br>
+        </p> 
+        <p> LED response is:
+            <?php
+                if(($_POST['ledfun']) == "Toggle") 
+                echo "Toggling<br>";
+                
+                if(($_POST['ledfun']) == "Setled") 
+                echo "Setting<br>";
+            ?>
+
+        </p>Album information:<br>
         <?php
             //Establishes connection to database
             $server = "localhost";
