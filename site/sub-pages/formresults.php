@@ -48,7 +48,7 @@
                 if(($_POST['ledfun']) == "Toggle") 
                 echo "Toggling<br>";
                 
-                if(($_POST['ledfun']) == "Setled") 
+                if(($_POST['ledfun']) == "Ledset") 
                 echo "Set LED<br>";
             ?>
 
