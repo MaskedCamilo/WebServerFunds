@@ -45,11 +45,13 @@
         </p> 
         <p> LED response is:
             <?php
-                if(($_POST['ledfun']) == "Toggle") 
-                echo "Toggling<br>";
+                if(($_POST['ledfun']) == "Toggle")
+                $output = `gpio mode 1 out`;
+                $output = `gpio toggle 1`;
 
                 if(($_POST['ledfun']) == "Ledset") 
-                echo "LED<br>"
+                $output = `gpio mode 1 out`;
+                $output = `gpio write 1 1`;
                 
             ?>
 
