@@ -40,12 +40,21 @@
                 <span id="req" style="color:red; font-weight:bold; display:none"> 
                     *This field is required </span> 
                 
+                <!--Modify Element (HTML DOM)-->
                 <script>
                     function requiredf(elem){
                         if (elem.value == "")
                             document.getElementById("req").style.display = "block";
                     }
                 </script>    
+            </p>
+            <p>
+                <!--Set or toggle a LED (GPIO)-->
+                Choose a LED function:
+                <input type="radio" id="toggle" name="ledfun" value="Toggle" required>
+                <label for="toggle">Toggle</label>
+                <input type="radio" id="ledset" name="ledfun" value="Ledset">
+                <label for="toggle">LED Set</label>
             </p>
             <p>
                 <!--Display Information retrieved from database-->
