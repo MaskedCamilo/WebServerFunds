@@ -43,84 +43,83 @@
         <p>
             John Lennon died in <?= (int)$_POST['year']; ?> 
         </p> 
-        <p> LED response is:
+        <p>
             <?php
                 if(($_POST['ledfun']) == "Toggle")
                 {
                     $output = `gpio mode 1 out`;
                     $output = `gpio toggle 1`;
-                    echo "toggle";
                 }
                 if(($_POST['ledfun']) == "Ledset") 
                 {
                     $output = `gpio mode 1 out`;
                     $output = `gpio write 1 1`;
-                    echo "set";
                 }
             ?>
+        </p>
+        <p>Album information:<br>
+            <?php
+                //Establishes connection to database
+                $server = "localhost";
+                $username = "camilo";
+                $password = "camilo01";
+                $database = "albums";
+                $conn = mysqli_connect($server, $username, $password, $database);
 
-        </p>Album information:<br>
-        <?php
-            //Establishes connection to database
-            $server = "localhost";
-            $username = "camilo";
-            $password = "camilo01";
-            $database = "albums";
-            $conn = mysqli_connect($server, $username, $password, $database);
-
-            //Defines the album selected by user
-            switch ($_POST['selection']) {
-                case "ppm": 
-                    $sel = 1;
-                    break;
-                case "hdn":
-                    $sel = 2;
-                    break;    
-                case "rev":
-                    $sel = 3;
-                    break;
-                case "sgt":
-                    $sel = 4;
-                    break;
-                case "mmt":
-                    $sel = 5;
-                    break;
-                case "twa":
-                    $sel = 6;
-                    break;
-            }
-            
-            //Displays album selected by user
-            $sql = "select * from albums where id = $sel;";
-            $result = mysqli_query($conn, $sql);
-            foreach($result as $row) {echo "Album Number: {$row['id']} | Album Name: 
-                {$row['album_name']} | Release Year: {$row['release_year']} | Length: 
-                {$row['length']} | First Single: {$row['first_single']} <br/><br/>";}  
-
-            $album = $_POST['album'];
-            $ryear = $_POST['ryear'];
-            $alength = $_POST['alength'];
-            $asingle = $_POST['asingle'];
-                
-            //Checks if the form fields are empty
-            if((!isset($album) || trim($album) =='') || (!isset($ryear) || trim($ryear) =='')
-                || (!isset($alength) || trim($alength) =='') || (!isset($asingle) || trim($asingle) ==''))
-                echo "You did not enter information about another album.";
-            else 
-                {
-                    // Input Sanitazion
-                    $san_album = filter_var($album, FILTER_SANITIZE_STRING);
-                    $san_ryear = (int)$ryear;
-                    $san_length = preg_replace("([^0-9:])", "", $alength);
-                    $san_asingle = filter_var($asingle, FILTER_SANITIZE_STRING);
-
-                    //Inserts data into the database
-                    $sql = "INSERT INTO albums (album_name, release_year, length, first_single) 
-                    VALUES ('$san_album', '$san_ryear', '$san_length', '$san_asingle')";
-                    $result = mysqli_query($conn, $sql);
-                    echo $result ? "The album was sucessfully submitted!" 
-                        : "Could not submit album, try again.: " . mysqli_error($conn);
+                //Defines the album selected by user
+                switch ($_POST['selection']) {
+                    case "ppm": 
+                        $sel = 1;
+                        break;
+                    case "hdn":
+                        $sel = 2;
+                        break;    
+                    case "rev":
+                        $sel = 3;
+                        break;
+                    case "sgt":
+                        $sel = 4;
+                        break;
+                    case "mmt":
+                        $sel = 5;
+                        break;
+                    case "twa":
+                        $sel = 6;
+                        break;
                 }
-        ?> 
+                
+                //Displays album selected by user
+                $sql = "select * from albums where id = $sel;";
+                $result = mysqli_query($conn, $sql);
+                foreach($result as $row) {echo "Album Number: {$row['id']} | Album Name: 
+                    {$row['album_name']} | Release Year: {$row['release_year']} | Length: 
+                    {$row['length']} | First Single: {$row['first_single']} <br/><br/>";}  
+
+                $album = $_POST['album'];
+                $ryear = $_POST['ryear'];
+                $alength = $_POST['alength'];
+                $asingle = $_POST['asingle'];
+                    
+                //Checks if the form fields are empty
+                if((!isset($album) || trim($album) =='') || (!isset($ryear) || trim($ryear) =='')
+                    || (!isset($alength) || trim($alength) =='') || (!isset($asingle) || trim($asingle) ==''))
+                    echo "You did not enter information about another album.";
+                else 
+                    {
+                        // Input Sanitazion
+                        $san_album = filter_var($album, FILTER_SANITIZE_STRING);
+                        $san_ryear = (int)$ryear;
+                        $san_length = preg_replace("([^0-9:])", "", $alength);
+                        $san_asingle = filter_var($asingle, FILTER_SANITIZE_STRING);
+
+                        //Inserts data into the database
+                        $sql = "INSERT INTO albums (album_name, release_year, length, first_single) 
+                        VALUES ('$san_album', '$san_ryear', '$san_length', '$san_asingle')";
+                        $result = mysqli_query($conn, $sql);
+                        echo $result ? "The album was sucessfully submitted!" 
+                            : "Could not submit album, try again.: " . mysqli_error($conn);
+                    }
+            ?> 
+        </p>
     </body>
 </html>
