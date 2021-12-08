@@ -1,5 +1,5 @@
 <?php
-	echo "its working";
+	echo 'its working';
 
 	//$output = gpio read 1;
 	//if( $output == '1')
