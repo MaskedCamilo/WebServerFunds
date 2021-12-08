@@ -1,13 +1,21 @@
-<?php
-	echo "its working";
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>gpio.php</title>
+    </head>
+    <body>
+	<?php
+		echo "its working";
 
-	$output = gpio read 1;
-		if( $output == '1')
-		      {
-			echo "The logic value of GPIO pin 18 is 1";
-		      }
-		else
-		      {
-			echo "The logic value of GPIO pin 18 is 0";
-		      }
+		$output = gpio read 1;
+			if( $output == '1')
+		      	{
+				echo "The logic value of GPIO pin 18 is 1";
+		      	}
+			else
+		      	{
+				echo "The logic value of GPIO pin 18 is 0";
+		      	}
 ?>
+    </body>
+</html>
