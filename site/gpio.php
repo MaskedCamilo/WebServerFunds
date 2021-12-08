@@ -6,7 +6,7 @@
 	{
 	  echo 'The logic value of GPIO pin 18 is 1';
 	}
-	else
+	if( $output == 0)
 	{
 	  echo 'The logic value of GPIO pin 18 is 0';
 	}
