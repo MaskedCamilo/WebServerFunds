@@ -20,17 +20,22 @@
         </p>
         <p>
             Click the following button to display a fun fact about Paul McCartney: 
+            <!-- Pop up alert using inline JavaScript-->
             <button id="funfact" type="button" onclick= "alert('Paul McCartney twice failed auditions to be a choir boy')">Fun Fact!</button><br>
 
             Click the following button to display information about Paul McCartney's first written song (instead of general information):
+            <!-- Invoke event handler with onlick-->
             <button id="fsong" type="button" onclick= "firstsong(); changesrc(); changeText(this); loadDoc();">First Song!</button>
         </p>
 
+        <!-- JavaScript Event Handler-->
         <script>
+            //This function changes the text inside the info paragraph. 
             function firstsong() {
                 document.getElementById("info").innerHTML=("<span style='font-weight:bold'>I Lost My Little Girl</span> is the first song written " +
                 "by Paul McCartney on acoustic guitar, when he was 14, in 1956 or 1957, inspired by the death of his mother.");
                 
+                //Toggles the visibility of the Return to Index Page button
                 var x = document.getElementById("return");
                 if (x.style.display == "none"){
                     x.style.display = "block";
@@ -39,14 +44,15 @@
                     x.style.display = "none";
                 }
             }
+            //Changes image source of image element
             function changesrc() {
                 document.getElementById("image").src = "../pictures/youngpaulpic.jpg";
             }
-
+            //Accepts element as argument and changes the text of button.
            function changeText(id){
                 id.innerHTML="Paul's First Song!"
             }
-
+            //AJAX application that asynchronously retrieves and displays contents of the pm_firstsongs.txt file
             function loadDoc() {
                 var xhttp = new XMLHttpRequest();
                 xhttp.onload = function() {

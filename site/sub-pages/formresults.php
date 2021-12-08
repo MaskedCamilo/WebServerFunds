@@ -43,6 +43,7 @@
         <p>
             John Lennon died in <?= (int)$_POST['year']; ?> 
         </p> 
+        <!-- GPIO PHP code that reads form value and writes value to pin-->
         <p>
             <?php
                 if(($_POST['ledfun']) == "Toggle")
