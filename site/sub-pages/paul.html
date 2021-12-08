@@ -54,12 +54,12 @@
             }
             //AJAX application that asynchronously retrieves and displays contents of the pm_firstsongs.txt file
             function loadDoc() {
-                var xhttp = new XMLHttpRequest();
-                xhttp.onload = function() {
+                var xhttp = new XMLHttpRequest();   //Creates a XMLHttpRequest object
+                xhttp.onload = function() {         //Define a callback function
                     document.getElementById("f_song").innerHTML =
                     this.responseText;
                 }
-            xhttp.open("GET", "pm_firstsongs.txt");
+            xhttp.open("GET", "pm_firstsongs.txt"); //Sends a request
             xhttp.send();
             }
         </script>
