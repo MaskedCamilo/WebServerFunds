@@ -9,8 +9,5 @@
                 $_POST('search');
             ?>
         </p>
-        <p>
-            <input type="submit" value="Search">
-        </p>
     </body>
 </hmtl>
