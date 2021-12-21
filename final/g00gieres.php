@@ -22,6 +22,7 @@
 
               $sql = "INSERT INTO search (search_term, ip_address)
               VALUES ('$sterm', '$ipadr')";
+              $result = mysqli_query($conn, $sql);
               mysqli_close($conn);
 
             ?>        
