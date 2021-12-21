@@ -18,7 +18,7 @@
               $server = "localhost";
               $username = "camilo";
               $password = "camilo01";
-              $database = "search";
+              $database = "albums";
               $conn = mysqli_connect($server, $username, $password, $database);
 
               $sql = "INSERT INTO search (search_term, ip_address)
