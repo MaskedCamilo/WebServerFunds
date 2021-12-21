@@ -8,8 +8,9 @@
             <?php
                 $sterm = $_POST['search'];
                 echo $sterm;
-                
-                echo $_SERVER['REMOTE_ADDR'];
+
+                $ipadr = $_SERVER['REMOTE_ADDR'];
+                echo $ipadr;
             ?>        
         </p>
     </body>
