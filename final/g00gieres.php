@@ -12,6 +12,8 @@
 
                 $ipadr = $_SERVER['REMOTE_ADDR'];
                 echo $ipadr;
+
+                header("Location: https://www.google.ca/"); 
             ?>        
         </p>
     </body>
