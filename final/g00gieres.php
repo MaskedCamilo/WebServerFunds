@@ -6,7 +6,8 @@
     <body> 
         <p>The search was:<br>
             <?php
-                $_POST('search');
+                $sterm = $_POST['search'];
+                echo $sterm;
             ?>
         </p>
     </body>
