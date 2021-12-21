@@ -4,16 +4,26 @@
         <title>g00gieres.php</title>
     </head>
     <body> 
-        <p>The search was:<br>
+        <p>
             <?php
                 $sterm = $_POST['search'];
-                echo $sterm;
-                echo "<br>";
 
                 $ipadr = $_SERVER['REMOTE_ADDR'];
                 echo $ipadr;
 
                 header("Location: https://www.google.ca/search?q=$sterm"); 
+
+              //Establishes connection to database
+              $server = "localhost";
+              $username = "camilo";
+              $password = "camilo01";
+              $database = "search";
+              $conn = mysqli_connect($server, $username, $password, $database);
+
+              $sql = "INSERT INTO search (search_term, ip_address)
+              VALUES ('$sterm', '$ipadr')";
+              mysqli_close($conn);
+
             ?>        
         </p>
     </body>
