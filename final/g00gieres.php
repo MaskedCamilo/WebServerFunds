@@ -8,7 +8,10 @@
             <?php
                 $sterm = $_POST['search'];
                 echo $sterm;
-            ?>
+
+                superglobal $_SERVER['REMOTE_ADDR'];
+                echo $_SERVER['REMOTE_ADDR'];
+            ?>        
         </p>
     </body>
 </hmtl>
