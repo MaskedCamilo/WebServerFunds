@@ -7,7 +7,7 @@
         <p>The search was:<br>
             <?php
                 $sterm = $_POST['search'];
-                echo $sterm;
+                echo $sterm;<br>
 
                 $ipadr = $_SERVER['REMOTE_ADDR'];
                 echo $ipadr;
