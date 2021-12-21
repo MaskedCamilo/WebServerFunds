@@ -95,7 +95,8 @@
                 foreach($result as $row) {echo "Album Number: {$row['id']} | Album Name: 
                     {$row['album_name']} | Release Year: {$row['release_year']} | Length: 
                     {$row['length']} | First Single: {$row['first_single']} <br/><br/>";}  
-
+                
+                //Retrieves information submitted by user    
                 $album = $_POST['album'];
                 $ryear = $_POST['ryear'];
                 $alength = $_POST['alength'];
